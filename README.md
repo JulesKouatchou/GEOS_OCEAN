@@ -72,6 +72,7 @@ The avialbale reoslutions are:
 | c180x72 | 720x410x40 | 
 | c180x72 | 1440x1080x50 (S2Sv3 resolution) |
 
+When you are asked which history template do you want to use, you may choose `HISTORY.AOGCM.rc.tmpl` or `HISTORY.S2S.rc.tmpl`. All other parameters may be left default. If the `ODAS` configuration is selected, the entire `GEOSodas/src/Applications/UMD_Etc/` directory will be copied into the experiment directory.
 
 Here, we provide a sample dialogue:
   
@@ -208,4 +209,20 @@ Here, we provide a sample dialogue:
 
 
 ## Running the Code
+After running the `gcm_setup` script, an experiment directory will be created. 
+Depending on your settings, you will have (among others) the following files (in the experiment directory) that are critical in running the `ODAS` configuration:
+
+    AGCM.rc.with_RECORD_OFF 
+    AGCM.rc.with_RECORD_ON
+    GAAS_GridComp.rc.tmpl
+    ocean_das_config
+
+You do not need to edit any of the above files unless you change the processor decomposition. In that case, the files `AGCM.rc.with_RECORD_OFF` and `AGCM.rc.with_RECORD_ON` need to be updated.
+
+To run the code, you will need to create the `cap_restart` file. You may allo need to edit the following files:
+- `CAP.rc`: to set the end date.
+- 'HISTORY.rc`: to specify the collections you are interested in.
+- `gcm_run.j`: to change the requested wallclock time (`-l walltime`) and the number of tasks (`--ntasks`).
+- `input.nml`: to modify the `layout` settings in the `ocean_model_nml` section. This is tied to the settings in `AGCM.rc.with_RECORD_OFF` and `AGCM.rc.with_RECORD_ON`.
+
 

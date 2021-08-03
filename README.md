@@ -58,7 +58,22 @@ Issue the command:
 
       ./gcm_setup
       
-and anser the questions. Here, we provide a sample dialogue:
+and provide the information requested. When you are asked if:
+- Yoou want to run the COUPLED Ocean/Sea-Ice Model, answer `YES`.
+- You want to to run the REPLAY DUAL OCEAN Model, answer
+      - `YES` is you intend to run '`ODAS`
+      - `NO` otherwise.
+
+The avialbale reoslutions are:
+
+| Atmosphere | Ocean |
+| :--- | :--- |
+| c90x72  | 360x200x50 |
+| c180x72 | 720x410x40 | 
+| c180x72 | 1440x1080x50 (S2Sv3 resolution) |
+
+
+Here, we provide a sample dialogue:
   
      Enter the Experiment ID:
           test_odas

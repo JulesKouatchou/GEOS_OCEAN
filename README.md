@@ -72,7 +72,7 @@ The avialbale reoslutions are:
 | c180x72 | 720x410x40 | 
 | c180x72 | 1440x1080x50 (S2Sv3 resolution) |
 
-When you are asked which history template do you want to use, you may choose `HISTORY.AOGCM.rc.tmpl` or `HISTORY.S2S.rc.tmpl`. All other parameters may be left default. If the `ODAS` configuration is selected, the entire `GEOSodas/src/Applications/UMD_Etc/` directory will be copied into the experiment directory.
+When you are asked which history template do you want to use, you may choose `HISTORY.AOGCM.rc.tmpl` or `HISTORY.S2S.rc.tmpl`. All other parameters may be left default. If the `ODAS` configuration is selected, the entire `GEOSodas/src/Applications/UMD_Etc/` directory will be copied into the `ocean_das` directory located in the experiment directory.
 
 Here, we provide a sample dialogue:
   
